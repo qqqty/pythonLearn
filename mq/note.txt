@@ -1,0 +1,18 @@
+sudo apt-get install rabbitmq-server
+
+sudo service rabbitmq-server start
+
+sudo rabbitmqctl list_users
+sudo rabbitmqctl list_queues
+
+sudo ls  /usr/lib/rabbitmq/bin
+sudo ls  /usr/bin
+
+
+sudo rabbitmq-plugins enable rabbitmq_management
+sudo service rabbitmq-server restart
+
+http://127.0.0.1:15672/
+
+
+sudo pip install  pika
