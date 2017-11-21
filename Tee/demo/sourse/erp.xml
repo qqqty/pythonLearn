@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<tree string="请假单">
+    <field name="x_jia_ren" select="1"/>
+    <field name="x_jia_tian" />
+    <field name="x_jia_start" select="1"/>
+    <field name="x_jia_noteee" />
+</tree> 
+
+
+
+<?xml version="1.0"?>
+<form string="请假单">
+    <field name="x_jia_ren"/>
+    <field name="x_jia_tian"/>
+    <field name="x_jia_start"/>
+    <field name="x_jia_note"/>
+</form>
+
+
+
+
+
+

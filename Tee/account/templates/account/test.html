@@ -1,0 +1,11 @@
+{% extends 'account/base.html' %}
+
+{% block title %}test DATA{% endblock %}
+
+{% block content %}
+    {% for i in arr %}
+{#        {{ i.id }}-{{ i.title }}-{{ i.content }}-{{ i.item }}-{{ i.vote_id }}<br>#}
+
+        {{ i.id }}-{{ i.vote_id }}-{{ i.item_id }}-{{ i.acc_id }}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'study/base.html' %}
+
+{% block title %}tpl{% endblock %}
+
+
+{% block content %}
+    str:
+    <div style="margin-left: 20px">{{ tpl_str }}</div>
+    <hr>
+    tuple:
+    <div style="margin-left: 20px">
+        {% for i in tpl_tuple %}{% if not forloop.first %}<span style="margin-left: 30px">{% endif %}{{ i }}{% if not forloop.first %}</span>{% endif %}{% endfor %}
+    </div>
+    <hr>
+    list:
+    <div style="margin-left: 20px">
+        {% for i in tpl_list %}{% if not forloop.first %}<span style="margin-left: 30px">{% endif %}{{ i }}{% if not forloop.first %}</span>{% endif %}{% endfor %}
+    </div>
+    <hr>
+    dict:
+    <div style="margin-left: 20px">
+        {% for key, val in tpl_dict.items %}{% if not forloop.first %}<span style="margin-left: 30px">{% endif %}{{ key }}:{{ val }}{% if not forloop.first %}</span>{% endif %}{% endfor %}
+        <br>{{ tpl_dict.name }}-{{ tpl_dict.age }}-{{ tpl_dict.email }}
+    </div>
+    <hr>
+{% endblock %}

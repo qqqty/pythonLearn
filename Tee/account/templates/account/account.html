@@ -1,0 +1,46 @@
+{% extends 'account/base.html' %}
+
+
+{% block title %}
+    {{ request.url }}
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+
+    欢迎:<span style="color:red">{{ username }}</span>
+    <br>
+    <a href="/logout/">Logout</a>
+    <hr>
+    <h2>TO DO</h2><hr>
+    <a href="/addVote/">创建投票</a>
+    <br>
+
+    <table>
+        <tr>
+            <th width="50">ID</th>
+            <th width="50">title</th>
+            <th width="50">content</th>
+            <th width="100">Res</th>
+            <th width="100">URL</th>
+        </tr>
+
+        {% for foo in voteList %}
+            <tr>
+                <td align="center">{{ foo.id }}</td>
+                <td align="center">{{ foo.title }}</td>
+                <td align="center">{{ foo.content }}</td>
+
+                <td align="center"><a href="/vote/{{ foo.id }}/">vote page</a></td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+
+{% endblock %}
+

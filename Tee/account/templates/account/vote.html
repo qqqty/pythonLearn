@@ -1,0 +1,22 @@
+{% extends 'account/base.html' %}
+
+{% block title %}vote{% endblock %}
+
+
+{% block content %}
+
+    {{ baseInfo.title }}<br>
+    {{ baseInfo.content }}<br>
+    <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="hidden" name="vote_id" value="{{ baseInfo.id }}">
+    {% for i in optionArr %}
+        {% if not forloop.first %}<span style="margin-left: 8px">{% endif %}
+            <input type="radio" name="item_id" value="{{ i.id }}">{{ i.item }}
+        {% if not forloop.first %}</span>{% endif %}
+    {% endfor %}
+
+    <input type="submit" value="vote">
+    </form>
+
+{% endblock %}

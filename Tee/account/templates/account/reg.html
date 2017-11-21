@@ -1,0 +1,15 @@
+{% extends 'account/base.html' %}
+
+{% block title %}Reg{% endblock %}
+
+{% block content %}
+    <h1>注册页面：</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ uf.as_p }}
+        <input type="submit" value="reg">
+    </form>
+    <br>
+    <a href="/login/">登陆</a>
+{% endblock %}
